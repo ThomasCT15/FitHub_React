@@ -1,0 +1,652 @@
+/* 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////// 🗿 Header Start 🗿 ///////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+        
+        /* @font-face {
+            font-family: rubik;
+        src: url('Rubik-VariableFont_wght.woff2') format('woff2'),
+         url('Rubik-VariableFont_wght.woff') format('woff'),
+         url('Rubik-VariableFont_wght.ttf') format('truetype');
+        }
+
+
+        body{
+            font-family: "rubik";
+        } */
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Rubik";
+  text-decoration: none;
+}
+
+  header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 30px 80px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+}
+
+/* .imageicon: Posiciona y da tamaño a un logo o imagen decorativa en el header. */
+.imageicon {
+  position: absolute;
+  top: -60px;   /* ajusta a gusto */
+  left: 10px;  /* ajusta a gusto */
+  width: 250px; /* o el tamaño deseado */
+  height: auto;
+  pointer-events: auto;
+}
+/* .nav-main: Permite que la barra de navegación crezca y ocupe espacio disponible. */
+/* NAV y UL */
+.nav-main {
+  flex-grow: 1;
+}
+
+/* .nav-links: Estiliza la lista de enlaces de navegación para que se muestren en línea y con separación. */
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+/* .nav-links li: Alinea verticalmente los elementos de la lista de navegación. */
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+/* .nav-links a: Da estilo a los enlaces de navegación (color, tamaño, padding). */
+/* Enlaces */
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 35px;
+  font-weight: 450;
+  padding: 8px 35px;
+}
+
+/* .Pet1: Aplica color a un enlace específico de la navegación. */
+.Pet1{
+    color: #000;
+}
+
+/* .Pet1:hover: Cambia el fondo y redondea el enlace al pasar el mouse. */
+.Pet1:hover{
+  background-color: #ddd;
+  border-radius: 40px;
+}
+
+/* .btn-inscribete: Estiliza el botón de inscripción (color, tamaño, bordes). */
+/* Botón ¡Inscríbete! */
+.btn-inscribete {
+  font-size: 26px;
+  border-radius: 50px;
+  border: none;
+  padding: 12px 24px;
+  background-color: #3061ff;
+  color: rgb(0, 0, 0);
+  font-weight: 400px;
+  cursor: pointer;
+}
+
+/* .btn-inscribete:hover: Cambia el color de fondo del botón al pasar el mouse. */
+.btn-inscribete:hover {
+  background-color: #284fce;
+  color: white;
+}
+
+
+/* .menu-container: Posiciona el contenedor del menú hamburguesa. */
+/* HAMBURGUESA */
+.menu-container {
+  position: relative;
+  z-index: 1100;
+}
+
+/* Oculta el checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* .menu-overlay: Crea un fondo oscuro cuando el menú lateral está abierto. */
+/* Fondo oscuro (overlay) */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 900;
+  cursor: pointer;
+}
+
+/* Mostrar overlay solo cuando el menú está activo */
+#menu-toggle:checked + .menu-overlay {
+  display: block;
+}
+
+
+
+/* .menu-icon: Da forma y estilo al icono de menú hamburguesa. */
+/* Icono hamburguesa */
+.menu-icon {
+  width: 50px;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1101;
+}
+
+/* .menu-icon span: Estiliza las líneas del icono hamburguesa. */
+.menu-icon span {
+  height: 4px;
+  background-color: #333;
+  border-radius: 25px;
+  display: block;
+}
+
+
+/* .menu: Estiliza el menú lateral (posición, tamaño, fondo, animación). */
+/* MENÚ LATERAL */
+.menu {
+  border-radius: 20px 0 0 20px;
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 420px;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  padding: 60px 20px;
+  box-sizing: border-box;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+#menu-toggle:checked + .menu-overlay + .menu-icon + .menu {
+  right: 0;
+}
+
+
+/* .menu a: Da estilo a los enlaces dentro del menú lateral. */
+/* Enlaces del menú */
+.menu a {
+    position: relative;
+    top: 10px;
+  display: block;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #333;
+  font-size: 30px;
+  font-weight: 450;
+}
+
+/* .menu a:hover: Cambia el color del enlace al pasar el mouse. */
+.menu a:hover {
+color:#3061ff ;
+}
+
+
+/* .menu img: Posiciona y da tamaño a una imagen dentro del menú lateral. */
+.menu img{
+  position: absolute;
+  top: -100px;   /* ajusta a gusto */
+  left: 15px;  /* ajusta a gusto */
+  width: 350px; /* o el tamaño deseado */
+  height: auto;
+  pointer-events: auto;
+}
+
+/* .menu button: Estiliza un botón dentro del menú lateral. */
+.menu button{
+    position: relative;
+    top: 60px;
+    left: 55px;
+    font-size: 16px;
+  border-radius: 15px;
+  border: none;
+  padding: 12px 80px;
+  background-color: #3061ff;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+
+/* .menu-container: Posiciona el contenedor del menú hamburguesa. */
+/* HAMBURGUESA */
+.menu-container {
+  position: relative;
+  z-index: 1100;
+}
+
+/* Oculta el checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* .menu-overlay: Crea un fondo oscuro cuando el menú lateral está abierto. */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 900;
+  cursor: pointer;
+}
+
+/* Mostrar overlay solo cuando el menú está activo */
+#menu-toggle:checked + .menu-overlay {
+  display: block;
+}
+
+/* .menu-icon: Da forma y estilo al icono de menú hamburguesa. */
+.menu-icon {
+  width: 50px;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1101;
+}
+
+/* .menu-icon span: Estiliza las líneas del icono hamburguesa. */
+.menu-icon span {
+  height: 4px;
+  background-color: #333;
+  border-radius: 25px;
+  display: block;
+}
+
+/* .menu: Estiliza el menú lateral (posición, tamaño, fondo, animación). */
+.menu {
+  border-radius: 20px 0 0 20px;
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 420px;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  padding: 60px 20px;
+  box-sizing: border-box;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+/* Mostrar el menú cuando el checkbox está marcado */
+#menu-toggle:checked + .menu-overlay + .menu-icon + .menu {
+  right: 0;
+}
+
+/* Estilos para los enlaces del menú */
+.menu a {
+  position: relative;
+  top: 10px;
+  display: block;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #333;
+  font-size: 30px;
+  font-weight: 450;
+}
+
+/* Cambia el color del enlace al pasar el mouse */
+.menu a:hover {
+  color: #3061ff;
+}
+
+/* Estiliza el botón dentro del menú lateral */
+.menu button {
+  position: relative;
+  top: 60px;
+  left: 55px;
+  font-size: 16px;
+  border-radius: 15px;
+  border: none;
+  padding: 12px 80px;
+  background-color: #3061ff;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Estilo para la X de cerrar */
+.menu .close-button {
+  position: absolute;
+  top: 30px;
+  left: 360px;
+  font-size: 2em;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #3061ff;
+}
+
+
+/* Estilo hover para los botones, excluyendo la "X" */
+.menu button:not(.close-button):hover {
+  background-color: #284fce;
+  color: white;
+}
+
+/* Cerrar el menú al hacer clic en la X (que es un label) */
+#menu-toggle:checked ~ .menu .close-button {
+  display: block;
+}
+
+
+/* .ImgUser img: Posiciona y da tamaño a la imagen de usuario. */
+.ImgUser img { 
+    position: relative;
+    left: -10px;
+    top: 80px;
+    width: 100px;
+}
+
+
+/* ImgUser a: Da estilo al enlace del usuario. */
+.ImgUser a{
+    display: block;
+    display: relative;
+    left: 100px;
+    top: -10px;
+    width: 100px;
+    font-size: 20px;
+    padding: -10px 0;
+}
+
+/* Animación icono hamburguesa a X */
+.menu-icon {
+  transition: transform 0.3s;
+}
+.menu-icon span {
+  display: block;
+  transition: 0.3s;
+}
+.menu-icon.open .bar1 {
+  transform: rotate(45deg) translate(8px, 8px);
+  background: #3061ff;
+}
+.menu-icon.open .bar2 {
+  opacity: 0;
+}
+.menu-icon.open .bar3 {
+  transform: rotate(-45deg) translate(8px, -8px);
+  background: #3061ff;
+}
+/* Animación menú lateral */
+.menu {
+  transition: right 0.4s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+.menu.slide-in {
+  right: 0 !important;
+}
+
+/* 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////// 🗿 End Of Header🗿 ///////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+.contenedor {
+  display: flex;
+  justify-content: center; /* Centra todo el conjunto */
+  gap: 40px; /* Espacio entre tarjetas */
+  flex-wrap: wrap; /* Si no caben, se bajan */
+  padding: 20px;
+}
+
+.caja {
+  border: 3px solid black;
+  border-radius: 15px;
+  overflow: hidden; /* Para que la imagen respete el borde redondeado */
+  background-color: white;
+  width: 300px;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px; /* Espacio entre tarjetas */
+}
+
+.caja img {
+  width: 100%;
+  height: 180px; /* Altura fija */
+  object-fit: cover; /* Recorta y ajusta la imagen */
+  display: block;
+}
+
+.caja h2 {
+  margin: 10px 0 5px;
+  text-align: left;     /* Alinea el texto a la izquierda */
+  padding-left: 10px;   /* Espacio desde el borde */
+}
+
+.caja p {
+  font-size: 12px;
+  margin: 0 0 10px;
+  margin-bottom: 50px; /* Espacio entre el párrafo y el enlace */
+  text-align: left;   /* Alinea a la izquierda */
+  padding-left: 10px; /* Espacio desde el borde */
+  padding-right: 10px;
+}
+
+
+
+.caja a {
+  display: block; /* Uno debajo del otro */
+  margin: 8px auto;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.caja a:first-of-type {
+  color: #0066ff;
+}
+
+.caja a:last-of-type {
+  background-color: #0066ff;
+  color: black;
+}
+.caja a:hover {
+  background-color: #284fce;
+  color: white;
+}
+
+
+
+
+/* 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////// 🔧Footer Start 🔧 ///////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+
+/* footer :diseña la parte del final del de la pagina */
+footer {
+    position: relative;
+    background-color: #000000;
+    padding: 100px 60px 60px 60px; /* Más padding arriba para la imagen flotante */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: white; /* Para que el texto se vea en negro */
+    box-sizing: border-box; /* para que el padding no afecte ancho */
+}
+
+footer .logo-principal {
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: auto;
+  pointer-events: auto;
+}
+footer p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+footer .linea {
+  border: none;
+  border-top: 2px solid white;
+  margin: 10px auto;
+  width: 30%;
+}
+
+
+footer .social-icons {
+  margin: 30px 0;
+}
+
+footer .social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+footer .icons:hover {
+  translate: 0 -10px;
+  transition: ease-in-out 0.3s;
+}
+
+footer .social-icons a:hover {
+  color: #00acee; /* Puedes cambiar el color al pasar el mouse */
+}
+
+footer .footer-links {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 800px;
+}
+
+footer .footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: #3061ff; /* Color al pasar el mouse */
+    text-decoration: underline;
+}
+
+/* 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////🔧 End Of Footer🔧 ///////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/
+
+
+
+
+
+
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .img_incio {
+        width: 95%; /* Slightly more width on smaller screens */
+        margin-top: 15px;
+        margin-bottom: 15px;
+        min-height: 200px; /* Adjust minimum height for smaller screens */
+    }
+}
+
+/* Media query for very small screens (e.g., mobile phones) */
+@media (max-width: 480px) {
+    .img_incio {
+        border-radius: 10px; /* Slightly less rounded corners */
+        min-height: 150px; /* Further adjust minimum height */
+    }
+}
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .imageicon {
+    top: -40px;
+    left: 5px;
+    width: 200px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  .imageicon {
+    top: -30px;
+    left: 0;
+    width: 150px;
+  }
+}
+
+@media (max-width: 797px){
+  .Pet1 {
+    display: none;
+  }
+
+  .opciones input[type="checkbox"] {
+  display: none;
+}
+
+.opciones{
+  display: none;
+}
+
+.btn-inscribete{
+  font-size: 18px;
+  border-radius: 38px;
+  border: none;
+  padding: 10px 78px;
+  background-color: #3061ff;
+  color: rgb(0, 0, 0);
+  font-weight: 400px;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 40px;
+  height: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1101;
+}
+}
+
+@media (max-width: 1381px) and (min-width: 1223px) {
+  .imageicon {
+display: none;
+  }
+}
