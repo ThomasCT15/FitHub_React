@@ -1,0 +1,77 @@
+/* footer :diseña la parte del final del de la pagina */
+footer {
+    position: relative;
+    background-color: #000000;
+    padding: 100px 60px 60px 60px; /* Más padding arriba para la imagen flotante */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* width: 100%; */
+    color: white; /* Para que el texto se vea en negro */
+    /*box-sizing: border-box;  para que el padding no afecte ancho */
+}
+
+footer .logo-principal {
+  position: absolute;
+  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  height: auto;
+  pointer-events: auto;
+}
+footer p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+footer .linea {
+  border: none;
+  border-top: 2px solid white;
+  margin: 10px auto;
+  width: 30%;
+}
+
+
+footer .social-icons {
+  margin: 30px 0;
+}
+
+footer .social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+footer .icons:hover {
+  translate: 0 -10px;
+  transition: ease-in-out 0.3s;
+}
+
+footer .social-icons a:hover {
+  color: #00acee; /* Puedes cambiar el color al pasar el mouse */
+}
+
+footer .footer-links {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 800px;
+}
+
+footer .footer-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: #3061ff; /* Color al pasar el mouse */
+    text-decoration: underline;
+}
