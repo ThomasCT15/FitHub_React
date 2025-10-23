@@ -1,0 +1,203 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 30px 80px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap;
+}
+
+/* .imageicon: Posiciona y da tamaño a un logo o imagen decorativa en el header. */
+.imageicon {
+  position: absolute;
+  top: -60px;   /* ajusta a gusto */
+  left: 10px;  /* ajusta a gusto */
+  width: 250px; /* o el tamaño deseado */
+  height: auto;
+  pointer-events: auto;
+}
+/* .nav-main: Permite que la barra de navegación crezca y ocupe espacio disponible. */
+/* NAV y UL */
+.nav-main {
+  flex-grow: 1;
+}
+
+/* .nav-links: Estiliza la lista de enlaces de navegación para que se muestren en línea y con separación. */
+.nav-links {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+/* .nav-links li: Alinea verticalmente los elementos de la lista de navegación. */
+.nav-links li {
+  display: flex;
+  align-items: center;
+}
+
+/* .nav-links a: Da estilo a los enlaces de navegación (color, tamaño, padding). */
+/* Enlaces */
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 30px;
+  font-weight: 450;
+  padding: 8px 45px;
+}
+
+/* .Pet1: Aplica color a un enlace específico de la navegación. */
+.Pet1{
+    color: #000;
+}
+
+/* .Pet1:hover: Cambia el fondo y redondea el enlace al pasar el mouse. */
+.Pet1:hover{
+  background-color: #ddd;
+  border-radius: 40px;
+}
+
+/* .btn-inscribete: Estiliza el botón de inscripción (color, tamaño, bordes). */
+/* Botón ¡Inscríbete! */
+.btn-inscribete {
+  font-size: 26px;
+  border-radius: 50px;
+  border: none;
+  padding: 12px 24px;
+  background-color: #3061ff;
+  color: rgb(0, 0, 0);
+  font-weight: 400px;
+  cursor: pointer;
+}
+
+/* .btn-inscribete:hover: Cambia el color de fondo del botón al pasar el mouse. */
+.btn-inscribete:hover {
+  background-color: #284fce;
+  color :white;
+}
+
+
+/* .menu-container: Posiciona el contenedor del menú hamburguesa. */
+/* HAMBURGUESA */
+.menu-container {
+  position: relative;
+  z-index: 1100;
+}
+
+/* Oculta el checkbox */
+#menu-toggle {
+  display: none;
+}
+
+/* .menu-overlay: Crea un fondo oscuro cuando el menú lateral está abierto. */
+/* Fondo oscuro (overlay) */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 900;
+  cursor: pointer;
+}
+
+/* Mostrar overlay solo cuando el menú está activo */
+#menu-toggle:checked + .menu-overlay {
+  display: block;
+}
+
+
+
+/* .menu-icon: Da forma y estilo al icono de menú hamburguesa. */
+/* Icono hamburguesa */
+.menu-icon {
+  width: 50px;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 1101;
+}
+
+/* .menu-icon span: Estiliza las líneas del icono hamburguesa. */
+.menu-icon span {
+  height: 4px;
+  background-color: #333;
+  border-radius: 25px;
+  display: block;
+}
+
+
+/* .menu: Estiliza el menú lateral (posición, tamaño, fondo, animación). */
+/* MENÚ LATERAL */
+.menu {
+  border-radius: 20px 0 0 20px;
+  position: fixed;
+  top: 0;
+  right: -420px;
+  width: 420px;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+  padding: 60px 20px;
+  box-sizing: border-box;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+#menu-toggle:checked + .menu-overlay + .menu-icon + .menu {
+  right: 0;
+}
+
+
+/* .menu a: Da estilo a los enlaces dentro del menú lateral. */
+/* Enlaces del menú */
+.menu a {
+    position: relative;
+    top: 10px;
+  display: block;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #333;
+  font-size: 30px;
+  font-weight: 450;
+}
+
+/* .menu a:hover: Cambia el color del enlace al pasar el mouse. */
+.menu a:hover {
+color:#3061ff ;
+}
+
+
+/* .menu img: Posiciona y da tamaño a una imagen dentro del menú lateral. */
+.menu img{
+  position: absolute;
+  top: -100px;   /* ajusta a gusto */
+  left: 15px;  /* ajusta a gusto */
+  width: 350px; /* o el tamaño deseado */
+  height: auto;
+  pointer-events: auto;
+}
+
+/* .menu button: Estiliza un botón dentro del menú lateral. */
+.menu button{
+    position: relative;
+    top: 60px;
+    left: 55px;
+    font-size: 16px;
+  border-radius: 15px;
+  border: none;
+  padding: 12px 80px;
+  background-color: #3061ff;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  cursor: pointer;
+}
