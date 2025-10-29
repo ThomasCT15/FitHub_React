@@ -173,5 +173,3 @@ export default function Register(): JSX.Element {
     </div>
   );
 }
-
-export default Register;
