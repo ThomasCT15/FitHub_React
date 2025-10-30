@@ -1,0 +1,96 @@
+.catalogo-entrenadores {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.catalogo-entrenadores h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 40px;
+    color: black;
+}
+
+.catalogo-entrenadores h1 span {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #284fce;
+}
+
+.entrenador {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.entrenador:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+}
+
+.entrenador img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+}
+
+.entrenador .info {
+    padding: 20px;
+    flex: 1;
+}
+
+.entrenador h2 {
+    margin: 0 0 10px;
+    color: #111;
+}
+
+.entrenador p {
+    margin: 4px 0;
+}
+
+.entrenador .bio {
+    margin-top: 10px;
+    color: #555;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+    .entrenador {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .entrenador img {
+        width: 100%;
+        height: auto;
+    }
+
+    .entrenador .info {
+        padding: 15px;
+    }
+}
+
+.entrenador {
+    position: relative; /* importante para que el logo se posicione dentro */
+}
+
+.logo-derecha {
+    position: absolute;
+    top: 10px;       /* separación desde arriba */
+    right: 15px;     /* separación desde la derecha */
+    width: 90px;     /* tamaño del logo */
+    opacity: 0.9;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo-derecha:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+

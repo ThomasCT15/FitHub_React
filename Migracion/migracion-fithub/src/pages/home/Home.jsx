@@ -55,12 +55,12 @@ function Home() {
 
   
     <section className="contenedor-cajas">
-      <article className="caja">
+      <article className="cajaHome">
         <h3>Plan Golden</h3>
         <p>Entrena en cualquiera de nuestras sedes en América Latina</p>
         <p><strong>Desde</strong></p>
         <p><strong>$ 109.900/mes</strong></p>
-        <button onClick={goToRegister}>¡Inscribete!</button>
+        <button className="buttonPlan" onClick={goToRegister}>¡Inscribete!</button>
 
   <div className="opciones">
           <label><input type="checkbox" defaultChecked disabled /> Acceso ilimitado a más de 1.700 sedes de la red</label>
@@ -70,12 +70,12 @@ function Home() {
         </div>
       </article>
 
-      <article className="caja">
+      <article className="cajaHome">
         <h3>Plan Platinum</h3>
         <p>Entrena en cualquiera de nuestras sedes en América Latina</p>
         <p><strong>Desde</strong></p>
         <p><strong>$ 109.900/mes</strong></p>
-        <button onClick={goToRegister}>¡Inscribete!</button>
+        <button className="buttonPlan" onClick={goToRegister}>¡Inscribete!</button>
 
   <div className="opciones">
           <label><input type="checkbox" defaultChecked disabled /> Acceso ilimitado a más de 1.700 sedes de la red</label>
@@ -84,12 +84,12 @@ function Home() {
         </div>
       </article>
 
-      <article className="caja">
+      <article className="cajaHome">
         <h3>Plan Diamond</h3>
         <p>Entrena en cualquiera de nuestras sedes en América Latina</p>
         <p><strong>Desde</strong></p>
         <p><strong>$ 109.900/mes</strong></p>
-        <button onClick={goToRegister}>¡Inscribete!</button>
+        <button className="buttonPlan" onClick={goToRegister}>¡Inscribete!</button>
 
   <div className="opciones">
           <label><input type="checkbox" defaultChecked disabled /> Acceso ilimitado a más de 1.700 sedes de la red</label>

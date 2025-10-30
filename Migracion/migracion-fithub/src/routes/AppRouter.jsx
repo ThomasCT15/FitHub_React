@@ -3,7 +3,8 @@ import Places from "../pages/places/Places";
 import Promotions from "../pages/promotions/Promotions";
 import Us from "../pages/us/Us";
 import Register from "../pages/register/Register";
-import LoginPage from "../pages/login/LoginPage";   
+import LoginPage from "../pages/loginPage/LoginPage"; 
+import Couches from "../pages/coaches/Coaches";  
 
 export let AppRouter = [
     {
@@ -30,4 +31,8 @@ export let AppRouter = [
         path: '/login',
         element: <LoginPage/>
     },
+    {
+        path: '/coaches',
+        element: <Couches/>
+    }
 ]

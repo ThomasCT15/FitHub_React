@@ -94,7 +94,7 @@
 }
 
 /* Tarjeta */
-.caja {
+.cajaHome {
   background-color: white;
   border: 2px solid #000000;
   border-radius: 16px;
@@ -109,20 +109,20 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.caja:hover {
+.cajaHome:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 25px rgba(48, 97, 255, 0.3);
 }
 
 /* Título */
-.caja h3 {
+.cajaHome h3 {
   margin-bottom: 15px;
   font-size: 28px;
   color: #000;
 }
 
 /* Texto */
-.caja p {
+.cajaHome p {
   margin: 10px 0;
   font-size: 18px;
   color: #222;
@@ -130,12 +130,12 @@
 }
 
 /* Precio */
-.caja p strong {
+.cajaHome p strong {
   font-weight: 700;
 }
 
 /* Botón */
-.caja button {
+.cajaHome button {
   background-color: #3061ff;
   color: black;
   font-family: 'Rubik', sans-serif;
@@ -150,7 +150,7 @@
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.caja button:hover {
+.cajaHome .buttonPlan:hover {
   background-color: #284fce;
   color: white;
   transform: scale(1.05);
@@ -249,6 +249,191 @@ h1{
   animation: pulse 2s infinite;
   pointer-events: none;
 }
+
+/* === DIFERENTE EFECTO SEGÚN PLAN === */
+
+/* Golden */
+.cajaHome:nth-child(1):hover {
+  box-shadow: 0 18px 50px rgba(212, 175, 55, 0.45);
+  background: linear-gradient(180deg, #ffeb3b, #f9a825);
+}
+
+/* Platinum */
+.cajaHome:nth-child(2):hover {
+  box-shadow: 0 18px 50px rgba(176, 196, 222, 0.4);
+  background: linear-gradient(180deg, #eceff1, #b0bec5);
+}
+
+/* Diamond */
+.cajaHome:nth-child(3):hover {
+  box-shadow: 0 18px 50px rgba(0, 191, 255, 0.45);
+  background: linear-gradient(180deg, #81d4fa, #0288d1);
+}
+
+/* Para mantener el texto y botones sobre la capa de luz */
+.cajaHome * {
+  position: relative;
+  z-index: 1;
+}
+
+
+/* GOLDEN */
+.cajaHome:nth-child(1) {
+  background: linear-gradient(145deg, #fff3b0, #ffd700);
+  border: none;
+  color: #3b2f00;
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
+  transition: all 0.4s ease;
+}
+.cajaHome:nth-child(1):hover {
+  box-shadow: 0 8px 40px rgba(255, 215, 0, 0.8);
+  background: linear-gradient(145deg, #ffea70, #fdd835);
+  transform: scale(1.05);
+}
+
+/* PLATINUM */
+.cajaHome:nth-child(2) {
+  background: linear-gradient(145deg, #eceff1, #cfd8dc);
+  border: none;
+  color: #2c2c2c;
+  box-shadow: 0 4px 20px rgba(176, 196, 222, 0.4);
+  transition: all 0.4s ease;
+}
+.cajaHome:nth-child(2):hover {
+  background: linear-gradient(145deg, #f9f9f9, #b0bec5);
+  box-shadow: 0 8px 40px rgba(176, 196, 222, 0.7);
+  transform: scale(1.05);
+}
+
+/* DIAMOND */
+.cajaHome:nth-child(3) {
+  background: linear-gradient(145deg, #c2f0ff, #81d4fa);
+  border: none;
+  color: #004466;
+  box-shadow: 0 4px 20px rgba(0, 191, 255, 0.4);
+  transition: all 0.4s ease;
+}
+.cajaHome:nth-child(3):hover {
+  background: linear-gradient(145deg, #e0f7fa, #4fc3f7);
+  box-shadow: 0 8px 40px rgba(0, 191, 255, 0.8);
+  transform: scale(1.05);
+}
+
+
+/* === BOTÓN PREMIUM CON EFECTO BRILLO + RIPPLE + RESPONSIVE === */
+.cajaHome .buttonPlan {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  z-index: 1;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  padding: 12px 40px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin: 25px auto 0;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* === EFECTO BRILLO === */
+.cajaHome .buttonPlan::after {
+  content: "";
+  position: absolute;
+  top: -25%;
+  left: -60%;
+  width: 60%;
+  height: 150%;
+  transform: skewX(-20deg);
+  background: rgba(255,255,255,0.18);
+  transition: left 0.6s ease, opacity 0.6s ease;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.95;
+}
+.cajaHome .buttonPlan:hover::after {
+  left: 160%;
+  opacity: 1;
+}
+
+/* === EFECTO RIPPLE (ola al hacer click) === */
+.cajaHome .buttonPlan::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: width 0.5s ease, height 0.5s ease, opacity 0.4s ease;
+}
+.cajaHome .buttonPlan:active::before {
+  width: 220%;
+  height: 220%;
+  opacity: 0;
+  transition: 0s;
+}
+
+/* === ESTILOS SEGÚN PLAN === */
+
+/* GOLDEN */
+.cajaHome:nth-child(1) .buttonPlan {
+  background: linear-gradient(135deg, #ffd54f, #d4af37);
+  color: #3b2f00;
+  box-shadow: 0 8px 30px rgba(212,175,55,0.18);
+}
+.cajaHome:nth-child(1) .buttonPlan:hover {
+  transform: scale(1.07);
+  box-shadow: 0 12px 40px rgba(255,215,0,0.28);
+}
+.cajaHome:nth-child(1) .buttonPlan::after {
+  background: rgba(255,255,255,0.25);
+}
+
+/* PLATINUM */
+.cajaHome:nth-child(2) .buttonPlan {
+  background: linear-gradient(135deg, #cfd8dc, #b0bec5);
+  color: #1a1a1a;
+  box-shadow: 0 8px 30px rgba(176,196,222,0.14);
+}
+.cajaHome:nth-child(2) .buttonPlan:hover {
+  transform: scale(1.07);
+  box-shadow: 0 12px 40px rgba(176,196,222,0.22);
+}
+.cajaHome:nth-child(2) .buttonPlan::after {
+  background: rgba(255,255,255,0.15);
+}
+
+/* DIAMOND */
+.cajaHome:nth-child(3) .buttonPlan {
+  background: linear-gradient(135deg, #4fc3f7, #00bfff);
+  color: #002b40;
+  box-shadow: 0 8px 30px rgba(0,191,255,0.14);
+}
+.cajaHome:nth-child(3) .buttonPlan:hover {
+  transform: scale(1.07);
+  box-shadow: 0 12px 40px rgba(0,191,255,0.28);
+}
+.cajaHome:nth-child(3) .buttonPlan::after {
+  background: rgba(255,255,255,0.20);
+}
+
+/* === RESPONSIVE (para pantallas pequeñas) === */
+@media (max-width: 768px) {
+  .cajaHome .buttonPlan {
+    font-size: 15px;
+    padding: 10px 32px;
+  }
+  .cajaHome .buttonPlan::after {
+    opacity: 0.7;
+  }
+}
+
 
 @keyframes pulse {
   0%, 100% {

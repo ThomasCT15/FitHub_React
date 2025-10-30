@@ -1,7 +1,7 @@
-.po{
-    background-color: #3061ff;
-   height: 100px;
-   display: flex;
+.po {
+  background-color: #3061ff;
+  height: 100px;
+  display: flex;
   margin-top: 1px;
   align-items: center;
   justify-content: center;
@@ -9,7 +9,14 @@
   text-align: center;
 }
 
-.bo{
+.text {
+  font-size: 18px;
+  max-width: 10000px;
+  margin: 10px;
+  padding: 0 6px;
+  text-align: center;
+}
+.bo {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,10 +24,10 @@
   gap: 24px;
   margin: 0 auto 40px;
   padding: 16px;
-  max-width: 1100px; /* centrar el contenido principal y limitar su ancho */
+  /* max-width: 1100px; centrar el contenido principal y limitar su ancho */
 }
 
-.row{
+.row {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
@@ -30,53 +37,91 @@
   margin: 0 auto; /* centrar cada fila */
 }
 
-.caja{
+.rowi {
+  gap: 30px;
+  align-items: stretch;
+  animation: fadeIn 0.6s ease both;
+  max-width: 1100px;
+  margin: 0 auto; /* /* centrar cada fila */
+}
+
+.caja {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
-.caja:hover{
+
+.caja:hover {
   transform: translateY(-6px);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
 }
 
-.dates{ color: #666; margin-top: 8px;
-align-items: center;
-  justify-content: center; }
-.desc{ margin-top: 8px; color: #333;
-align-items: center;
-  justify-content: center; }
-.benefits{ margin-top: 10px; 
-    padding-left: 18px; color:#444;
-align-items: center;
-  justify-content: center; }
-.price{ margin-top: 12px; 
-    font-size: 18px;
-align-items: center;
-  justify-content: center; }
+.dates {
+  color: #666;
+  margin-top: 8px;
+  align-items: center;
+  justify-content: center;
+}
 
-.cta{
-  background: linear-gradient(135deg,#3061ff,#6a4bff);
+.desc {
+  margin-top: 8px;
+  color: #333;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefits {
+  margin-top: 10px;
+  padding-left: 18px;
+  color: #444;
+  align-items: center;
+  justify-content: center;
+}
+
+.price {
+  margin-top: 12px;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta {
+  background: linear-gradient(135deg, #3061ff, #6a4bff);
   color: #fff;
   padding: 12px 28px;
   border-radius: 999px;
   border: none;
   cursor: pointer;
   font-weight: 600;
-  box-shadow: 0 6px 18px rgba(48,97,255,0.18);
+  box-shadow: 0 6px 18px rgba(48, 97, 255, 0.18);
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
-.cta:hover{ transform: translateY(-3px); box-shadow: 0 10px 24px rgba(48,97,255,0.22); }
-.cta:active{ transform: translateY(-1px); }
+.cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(48, 97, 255, 0.22);
+}
+.cta:active {
+  transform: translateY(-1px);
+}
 
-.placeholder{ display:flex; align-items:center; justify-content:center; background: linear-gradient(180deg,#f6f7ff,#ffffff); }
-.placeholder-content{ padding: 20px; text-align:center }
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #f6f7ff, #ffffff);
+}
+.placeholder-content {
+  padding: 20px;
+  text-align: center;
+}
 
-@media (max-width: 900px){
-  .row{ grid-template-columns: 1fr; }
+@media (max-width: 900px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Pantallas anchas: imágenes más altas para balance visual */
@@ -86,9 +131,15 @@ align-items: center;
   }
 } */
 
-@keyframes fadeIn{
-  from{ opacity: 0; transform: translateY(8px)}
-  to{ opacity: 1; transform: translateY(0)}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* .contenedor-cajas: Contenedor flexible para agrupar varias cajas (tarjetas). */
@@ -105,7 +156,7 @@ align-items: center;
 .caja {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
   background-color: white;
-  border: 1px solid rgba(0,0,0,0.06);
+  border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 14px;
   padding: 20px;
   width: 100%;
@@ -118,20 +169,14 @@ align-items: center;
 
 .caja .img-responsive {
   width: 100%;
-  height: 60%;
+  height: 50%;
   border-radius: 10px;
   object-fit: cover;
 }
 
-.caja .lastimage {
-  width: 100%;
-  height: 40%;
-  border-radius: 10px;
-  object-fit: cover;
-}
 
 /* .caja h3: Estilo para el título de la tarjeta. */
-.caja h3 {
+.caja .sub_h3 {
   text-align: left;
   margin: 8px 0 6px 0;
 }
@@ -155,5 +200,13 @@ align-items: center;
   width: auto;
   align-self: center;
 }
+
+.promotions {
+  font-size: 36px;
+  text-align: center;
+  margin: 40px 0 20px 0;
+}
+
+
 
 /* Hover ya definido en .cta, se mantiene para coherencia */

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 function Header() {
   const goToRegister = useCallback(() => {
     // usa rutas relativas a la app; ajusta según tu enrutador si usas react-router
-    window.location.href = '/registra';
+    window.location.href = '/register';
   }, []);
 
   return (

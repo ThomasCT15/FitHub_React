@@ -8,6 +8,24 @@
   text-decoration: none;
 }
 
+/* Make root and pages full-height so footer can be pushed to bottom */
+html, body, #root {
+  height: 100%;
+}
+
+/* .app is the top-level wrapper in App.jsx. The direct child (the route/page)
+   becomes a column flex container and will span the viewport height. */
+.app > * {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Let any footer inside a page push itself to the bottom */
+footer {
+  margin-top: auto;
+}
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
     .img_incio {

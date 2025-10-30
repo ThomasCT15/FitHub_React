@@ -3,11 +3,12 @@ import Logo from '../assets/IMG/logos/LogoFinal.png';
 import UsuarioImg from '../assets/IMG/logos/Usuario.png';
 import { useCallback, useEffect, useRef } from 'react';
 import initBurgerAnimation from '../helpers/animationBurgerMenu';
+import { Link } from 'react-router-dom';
 
 function BurgerMenu() {
     const goToRegister = useCallback(() => {
         // usa rutas relativas a la app; ajusta según tu enrutador si usas react-router
-        window.location.href = '/registra';
+        window.location.href = '/register';
       }, []);
 
   const menuRef = useRef(null);
@@ -37,9 +38,10 @@ function BurgerMenu() {
           <a id="number" href="/login"><span style={{ color: '#868686' }}>1.152.224.905</span></a>
         </div>
 
-        <a href="/sedes">Sedes</a>
-        <a href="/promociones">Promociones</a>
-        <a href="/quienes">Quienes Somos</a>
+        <Link to="/sedes">Sedes</Link>
+        <Link to="/promociones">Promociones</Link>
+        <Link to="/quienes">Quienes Somos</Link>
+        <Link to="/coaches">Entrenadores</Link>
         <button onClick={goToRegister}>¡Inscríbete!</button>
       </nav>
     </aside>

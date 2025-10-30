@@ -1,23 +1,9 @@
 import React, { useState } from "react";
-import "./register.css";
+import "./Register.css";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 
-interface FormData {
-  nombre: string;
-  apellido: string;
-  fechaNacimiento: string;
-  tipoDocumento: string;
-  numeroDocumento: string;
-  telefono: string;
-  ciudad: string;
-  direccion: string;
-  correo: string;
-  contrasena: string;
-  aceptoTerminos: boolean;
-}
-
-const initialData: FormData = {
+const initialData = {
   nombre: "",
   apellido: "",
   fechaNacimiento: "",
@@ -31,17 +17,15 @@ const initialData: FormData = {
   aceptoTerminos: false,
 };
 
-export default function Register(): JSX.Element {
-  const [form, setForm] = useState<FormData>(initialData);
+function Register() {
+  const [form, setForm] = useState(initialData);
 
-  function handleChange<K extends keyof FormData>(
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) {
-    const { name, value, type, checked } = e.target as HTMLInputElement;
+  function handleChange(e) {
+    const { name, value, type, checked } = e.target;
     setForm((prev) => ({ ...prev, [name]: type === "checkbox" ? checked : value }));
   }
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function handleSubmit(e) {
     e.preventDefault();
     // validar / enviar
     console.log("Enviar datos:", form);
@@ -51,7 +35,7 @@ export default function Register(): JSX.Element {
     <div>
       <Header />
       <form onSubmit={handleSubmit}>
-        <h2>CREAR CUENTA</h2>
+        <h2 className="tittle_register">CREAR CUENTA</h2>
 
         <input
           name="nombre"
