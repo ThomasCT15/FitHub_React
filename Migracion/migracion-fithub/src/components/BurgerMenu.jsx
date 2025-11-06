@@ -42,6 +42,8 @@ function BurgerMenu() {
         <Link to="/promociones">Promociones</Link>
         <Link to="/quienes">Quienes Somos</Link>
         <Link to="/coaches">Entrenadores</Link>
+        <Link to="/plans" >Planes</Link>
+        
         <button onClick={goToRegister}>¡Inscríbete!</button>
       </nav>
     </aside>

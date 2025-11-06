@@ -5,6 +5,7 @@ import Us from "../pages/us/Us";
 import Register from "../pages/register/Register";
 import LoginPage from "../pages/loginPage/LoginPage"; 
 import Couches from "../pages/coaches/Coaches";  
+import Plans from "../pages/plans/Plans";
 
 export let AppRouter = [
     {
@@ -34,5 +35,9 @@ export let AppRouter = [
     {
         path: '/coaches',
         element: <Couches/>
+    },
+    {
+        path: '/plans',
+        element: <Plans/>
     }
 ]

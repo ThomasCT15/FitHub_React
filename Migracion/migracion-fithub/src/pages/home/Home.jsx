@@ -17,9 +17,9 @@ function Home() {
     return () => cleanup && cleanup();
   }, []);
 
-  const goToRegister = useCallback(() => {
-    window.location.href = '/registra';
-  }, []);
+  const goToPlans = useCallback(() => {
+    navigate('/plans');
+  }, [navigate]);
 
   const openFullscreen = useCallback((card) => {
     if (!card) return;
@@ -60,13 +60,12 @@ function Home() {
         <p>Entrena en cualquiera de nuestras sedes en América Latina</p>
         <p><strong>Desde</strong></p>
         <p><strong>$ 109.900/mes</strong></p>
-        <button className="buttonPlan" onClick={goToRegister}>¡Inscribete!</button>
+        <button className="buttonPlan" onClick={goToPlans}>¡Ver Más!</button>
 
   <div className="opciones">
-          <label><input type="checkbox" defaultChecked disabled /> Acceso ilimitado a más de 1.700 sedes de la red</label>
-          <label><input type="checkbox" defaultChecked disabled /> Derecho a traer un invitado 5 veces al mes</label>
-          <label><input type="checkbox" defaultChecked disabled /> Acceso ilimitado a más de 1.700 sedes de la red</label>
-          <label><input type="checkbox" defaultChecked disabled /> Derecho a traer un invitado 5 veces al mes</label>
+          <label><input type="checkbox" defaultChecked disabled /> Acceso ilimitado a todas las sedes estándar</label>
+          <label><input type="checkbox" defaultChecked disabled /> Clases grupales de cardio y musculación</label>
+          <label><input type="checkbox" defaultChecked disabled /> Locker personal en horario de entrenamiento</label>
         </div>
       </article>
 
@@ -74,13 +73,13 @@ function Home() {
         <h3>Plan Platinum</h3>
         <p>Entrena en cualquiera de nuestras sedes en América Latina</p>
         <p><strong>Desde</strong></p>
-        <p><strong>$ 109.900/mes</strong></p>
-        <button className="buttonPlan" onClick={goToRegister}>¡Inscribete!</button>
+        <p><strong>$ 149.900/mes</strong></p>
+        <button className="buttonPlan" onClick={goToPlans}>¡Ver Más!</button>
 
   <div className="opciones">
-          <label><input type="checkbox" defaultChecked disabled /> Acceso ilimitado a más de 1.700 sedes de la red</label>
-          <label><input type="checkbox" defaultChecked disabled /> Derecho a traer un invitado 5 veces al mes</label>
-          <label><input type="checkbox" defaultChecked disabled /> Acceso ilimitado a más de 1.700 sedes de la red</label>
+          <label><input type="checkbox" defaultChecked disabled /> Todo lo del Plan Golden</label>
+          <label><input type="checkbox" defaultChecked disabled /> Acceso a zona de spa y saunas</label>
+          <label><input type="checkbox" defaultChecked disabled /> Evaluación física mensual</label>
         </div>
       </article>
 
@@ -88,12 +87,13 @@ function Home() {
         <h3>Plan Diamond</h3>
         <p>Entrena en cualquiera de nuestras sedes en América Latina</p>
         <p><strong>Desde</strong></p>
-        <p><strong>$ 109.900/mes</strong></p>
-        <button className="buttonPlan" onClick={goToRegister}>¡Inscribete!</button>
+        <p><strong>$ 199.900/mes</strong></p>
+        <button className="buttonPlan" onClick={goToPlans}>¡Ver Más!</button>
 
   <div className="opciones">
-          <label><input type="checkbox" defaultChecked disabled /> Acceso ilimitado a más de 1.700 sedes de la red</label>
-          <label><input type="checkbox" defaultChecked disabled /> Derecho a traer un invitado 5 veces al mes</label>
+          <label><input type="checkbox" defaultChecked disabled /> Plan de nutrición profesional</label>
+          <label><input type="checkbox" defaultChecked disabled /> Acceso VIP a zonas exclusivas y piscina</label>
+          <label><input type="checkbox" defaultChecked disabled /> Kit de bienvenida premium</label>
         </div>
       </article>
     </section>

@@ -17,10 +17,10 @@ function Promotions() {
     <div>
       <Header />
       <section className="po">
-        <h1>!NO LO PIENSES MÁS!</h1>
+        <h1 className="ti" >!NO LO PIENSES MÁS!</h1>
       </section>
 
-      <section>
+      <section className="pi">
         <p>
           Elige una de nuestras Promos xxxxxxx vigentes, inscríbete ya y vive la
           mejor experiencia fitness de Latinoamérica; tenemos beneficios
@@ -30,7 +30,7 @@ function Promotions() {
       </section>
       
         <div>
-          <h2 className="promotions">Promociones</h2>
+          <h2 className="promotions">PROMOCIONES</h2>
           <div className="bo">
             <div className="row">
               <div className="caja">

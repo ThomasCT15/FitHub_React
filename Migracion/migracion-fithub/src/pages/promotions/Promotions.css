@@ -1,6 +1,6 @@
 .po {
   background-color: #3061ff;
-  height: 100px;
+  height: 70px;
   display: flex;
   margin-top: 1px;
   align-items: center;
@@ -8,6 +8,19 @@
   color: white;
   text-align: center;
 }
+
+.po .ti{
+  margin-bottom: 50px;
+}
+
+.pi {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #000;
+  padding: 15px 60px;
+}
+
 
 .text {
   font-size: 18px;
@@ -185,7 +198,7 @@
 .caja p {
   text-align: left;
   margin: 8px 0;
-  font-size: 14px;
+  font-size: 16px;
   color: #222;
 }
 

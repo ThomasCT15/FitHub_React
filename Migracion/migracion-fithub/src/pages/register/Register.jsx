@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Register.css";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
@@ -18,6 +18,9 @@ const initialData = {
 };
 
 function Register() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [form, setForm] = useState(initialData);
 
   function handleChange(e) {
