@@ -1,4 +1,12 @@
+.plans-title {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 55px;
+}
 
+.plans-diferent {
+  color: #3061ff;
+}
 /* === DIFERENTE EFECTO SEGÚN PLAN === */
 
 /* Golden */
@@ -192,3 +200,4 @@
     transform: translate(-50%, -50%) scale(1.05);
   }
 }
+

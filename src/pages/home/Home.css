@@ -184,17 +184,14 @@
   cursor: pointer;
 }
 
-h1{text-align: center;}
 
-/* .diferent: Aplica un color especial a los elementos con esta clase. */
-.diferent{
-    color: #3061ff;
-}
+/* Scoped title for Home page */
+.home-title { text-align: center; }
 
-h1{
-    font-size: 40px;
-    margin-top: 55px;
-}
+/* Scoped accent for Home page title */
+.home-diferent { color: #3061ff; }
+
+.home-title { font-size: 40px; margin-top: 55px; }
 
 /* Seccion de videos */
 

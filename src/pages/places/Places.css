@@ -64,7 +64,7 @@
   color: white;
 }
 
-.caja button {
+.caja .places-cta {
   position: relative;
   top: 5px;
   left: 1px;
@@ -78,7 +78,7 @@
   cursor: pointer;
 }
 
-.caja button:not(.close-button):hover {
+.caja .places-cta:not(.close-button):hover {
   background-color: #284fce;
   color: white;
 }

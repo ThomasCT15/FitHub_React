@@ -14,7 +14,7 @@ function Coaches() {
     <div>
       <Header />
       <section className="catalogo-entrenadores">
-        <h1>Nuestros <span>Entrenadores</span></h1>
+        <h1 className="coaches-title">Nuestros <span className="coaches-title-accent">Entrenadores</span></h1>
 
         <div className="entrenador">
           <img src={ImgJuan} alt="Entrenador Juan Pérez" />

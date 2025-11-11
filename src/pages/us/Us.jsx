@@ -10,7 +10,7 @@ function Us() {
   return (
     <div>
       <Header />
-      <main>
+      <main className="us-main">
         <img className="imgqs" src={imgGym3} alt="" />
       </main>
 

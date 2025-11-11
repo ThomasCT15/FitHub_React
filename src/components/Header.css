@@ -1,4 +1,4 @@
-header {
+.header-root {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -36,7 +36,7 @@ header {
 }
 
 /* .nav-links li: Alinea verticalmente los elementos de la lista de navegación. */
-.nav-links li {
+.nav-links .nav-item {
   display: flex;
   align-items: center;
 }

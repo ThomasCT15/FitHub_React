@@ -29,7 +29,7 @@ function Promotions() {
         </p>
       </section>
       
-        <div>
+        <div className="promotions-wrapper">
           <h2 className="promotions">PROMOCIONES</h2>
           <div className="bo">
             <div className="row">

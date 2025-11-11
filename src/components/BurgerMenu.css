@@ -86,7 +86,7 @@
 }
 
 /* Estiliza el botón dentro del menú lateral */
-.menu button {
+.menu .menu-cta {
   position: relative;
   top: 60px;
   left: 55px;
@@ -114,7 +114,7 @@
 
 
 /* Estilo hover para los botones, excluyendo la "X" */
-.menu button:not(.close-button):hover {
+.menu .menu-cta:not(.close-button):hover {
   background-color: #284fce;
   color: white;
 }

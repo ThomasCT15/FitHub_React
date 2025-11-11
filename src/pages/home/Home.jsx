@@ -51,7 +51,7 @@ function Home() {
         <button className="arrow left">&#10094;</button>
         <button className="arrow right">&#10095;</button>
       </div>
-  <h1>Elegir Planes y <span className="diferent">Entra ¡YA!</span></h1>
+  <h1 className="home-title">Elegir Planes y <span className="home-diferent">Entra ¡YA!</span></h1>
 
   
     <section className="contenedor-cajas">

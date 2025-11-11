@@ -18,19 +18,19 @@ function Header() {
 
       <nav className="nav-main">
         <ul className="nav-links">
-          <li>
+          <li className="nav-item">
             <Link to="/sedes" className="Pet1">sedes</Link>
           </li>
-          <li>
+          <li className="nav-item">
             <Link to="/promociones" className="Pet1">Promociones</Link>
           </li>
-          <li>
+          <li className="nav-item">
             <Link to="/us" className="Pet1">Quienes somos</Link>
           </li>
-          <li>
+          <li className="nav-item">
             <button className="btn-inscribete" onClick={goToRegister}>¡Inscríbete!</button>
           </li>
-          <li>
+          <li className="nav-item">
             <BurgerMenu />
           </li>
         </ul>

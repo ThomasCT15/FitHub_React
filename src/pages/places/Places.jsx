@@ -15,19 +15,19 @@ function Places() {
   return (
     <div>
       <Header />
-            <div className="contenedor">
+            <div className="contenedor places-wrapper">
                 <article className="caja">
                       <img src={Img5} alt="Floresta" />
                     <h2>Floresta</h2>
                     <p>Carrera 67A, #95-63 - Floresta, Bogotá - D.C.</p>
-                    <button onClick={() => window.location.href = '/registra'}>¡Inscribete ya!</button>
+                    <button className="places-cta" onClick={() => window.location.href = '/registra'}>¡Inscribete ya!</button>
                 </article>
 
                 <article className="caja">
                       <img src={Img4} alt="Calle 116 Pepe Sierra" />
                     <h2>Calle 116 Pepe Sierra</h2>
                     <p>Carrera 67A, #95-63 - Floresta, Bogotá - D.C.</p>
-                    <button onClick={() => window.location.href = '/registra'}>¡Inscribete ya!</button>
+                    <button className="places-cta" onClick={() => window.location.href = '/registra'}>¡Inscribete ya!</button>
                 </article>
 
                 <article className="caja">
