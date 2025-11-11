@@ -6,6 +6,7 @@ import Register from "../pages/register/Register";
 import LoginPage from "../pages/loginPage/LoginPage"; 
 import Couches from "../pages/coaches/Coaches";  
 import Plans from "../pages/plans/Plans";
+import Reviews from "../pages/reviews/Reviews";
 
 export let AppRouter = [
     {
@@ -39,5 +40,10 @@ export let AppRouter = [
     {
         path: '/plans',
         element: <Plans/>
+    },
+    {
+        path: '/reviews',
+        element: <Reviews/>
     }
+
 ]

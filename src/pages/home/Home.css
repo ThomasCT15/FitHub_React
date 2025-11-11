@@ -7,11 +7,12 @@
   top: 20px;
   position: relative;
   width: 100%;
-  height: 800px; /* altura grande */
+  height: 600px; /* altura grande */
   overflow: hidden;
   border-radius: 15px;
   box-shadow: 0 0 20px #284fce;
 }
+
 
 /* === CARRUSEL === */
 .carousel-wrapper {
@@ -38,16 +39,16 @@
 
 /* === Imágenes === */
 #slide-1 {
-  background-image: url('../../assets/IMG/ImagenIncio.png');
+  background-image: url('../../assets/IMG/Gym1.png');
 }
 #slide-2 {
-  background-image: url('https://images.pexels.com/photos/1552249/pexels-photo-1552249.jpeg');
+  background-image: url('../../assets/IMG/Gym2.png');
 }
 #slide-3 {
-  background-image: url('https://images.pexels.com/photos/620337/pexels-photo-620337.jpeg');
+  background-image: url('../../assets/IMG/Gym3.png');
 }
 #slide-4 {
-  background-image: url('https://images.pexels.com/photos/2166711/pexels-photo-2166711.jpeg');
+  background-image: url('../../assets/IMG/Gym4.png');
 }
 
 /* === FLECHAS === */
@@ -93,67 +94,50 @@
   flex-wrap: wrap;
 }
 
-/* Tarjeta */
-.cajaHome {
-  background-color: white;
-  border: 2px solid #000000;
-  border-radius: 16px;
-  padding: 32px 24px;
-  width: 100%;
-  max-width: 320px; /* más ancha */
-  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.15);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center; /* centra todo el contenido */
+/* Tarjeta general de planes */
+.home-plan {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 500px;
+  margin: 2rem auto;
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cajaHome:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(48, 97, 255, 0.3);
+.home-plan:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Título */
-.cajaHome h3 {
-  margin-bottom: 15px;
-  font-size: 28px;
-  color: #000;
+.home-plan h3 {
+  color: #3061ff;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
 }
 
-/* Texto */
-.cajaHome p {
-  margin: 10px 0;
-  font-size: 18px;
-  color: #222;
-  line-height: 1.4;
+.home-plan p {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
 }
 
-/* Precio */
-.cajaHome p strong {
-  font-weight: 700;
-}
-
-/* Botón */
-.cajaHome button {
+.home-plan .buttonPlan {
   background-color: #3061ff;
-  color: black;
-  font-family: 'Rubik', sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  padding: 12px 30px;
-  border-radius: 30px;
+  color: #000000;
   border: none;
+  border-radius: 6px;
+  padding: 0.8rem 1.5rem;
   cursor: pointer;
-  margin: 25px auto;
-  width: 180px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-.cajaHome .buttonPlan:hover {
-  background-color: #284fce;
-  color: white;
-  transform: scale(1.05);
+.home-plan .buttonPlan:hover {
+  background-color: #0930af;
+  color: #fff;
 }
 
 /* Lista de beneficios */
@@ -430,6 +414,7 @@
     opacity: 0.7;
   }
 }
+
 
 
 @keyframes pulse {

@@ -30,8 +30,8 @@
 
 /* .menu-icon: Da forma y estilo al icono de menú hamburguesa. */
 .menu-icon {
-  width: 50px;
-  height: 35px;
+  width: 40px;
+  height: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -76,13 +76,16 @@
   padding: 10px 0;
   text-decoration: none;
   color: #333;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 450;
 }
 
 /* Cambia el color del enlace al pasar el mouse */
-.menu a:hover {
+
+.burgermenu-opcions a:hover{
   color: #3061ff;
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(0, 38, 255, 0.06);
 }
 
 /* Estiliza el botón dentro del menú lateral */
