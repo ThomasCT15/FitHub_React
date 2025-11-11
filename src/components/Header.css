@@ -2,10 +2,14 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  color: white;
   background-color: #ffffff;
-  padding: 30px 80px;
+  padding: 25px 80px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   flex-wrap: wrap;
+  position: sticky;
+  top: 0 ;
+  z-index: 1200;
 }
 
 /* .imageicon: Posiciona y da tamaño a un logo o imagen decorativa en el header. */
@@ -13,7 +17,7 @@ header {
   position: absolute;
   top: -60px;   /* ajusta a gusto */
   left: 10px;  /* ajusta a gusto */
-  width: 250px; /* o el tamaño deseado */
+  width: 220px; /* o el tamaño deseado */
   height: auto;
   pointer-events: auto;
 }
@@ -46,7 +50,7 @@ header {
 .nav-links a {
   text-decoration: none;
   color: #000;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 450;
   padding: 8px 45px;
 }
@@ -65,7 +69,7 @@ header {
 /* .btn-inscribete: Estiliza el botón de inscripción (color, tamaño, bordes). */
 /* Botón ¡Inscríbete! */
 .btn-inscribete {
-  font-size: 26px;
+  font-size: 18px;
   border-radius: 50px;
   border: none;
   padding: 12px 24px;

@@ -7,6 +7,47 @@
 .plans-diferent {
   color: #3061ff;
 }
+
+/* Tarjeta */
+.cajaHome {
+  background-color: white;
+  border: 2px solid #000000;
+  border-radius: 16px;
+  padding: 32px 24px;
+  width: 100%;
+  max-width: 320px; /* más ancha */
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center; /* centra todo el contenido */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cajaHome:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(48, 97, 255, 0.3);
+}
+
+/* Título */
+.cajaHome h3 {
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: #000;
+}
+
+/* Texto */
+.cajaHome p {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #222;
+  line-height: 1.4;
+}
+
+/* Precio */
+.cajaHome p strong {
+  font-weight: 700;
+}
 /* === DIFERENTE EFECTO SEGÚN PLAN === */
 
 /* Golden */

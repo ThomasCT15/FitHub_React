@@ -54,49 +54,15 @@ function Home() {
   <h1 className="home-title">Elegir Planes y <span className="home-diferent">Entra ¡YA!</span></h1>
 
   
-    <section className="contenedor-cajas">
-      <article className="cajaHome">
-        <h3>Plan Golden</h3>
-        <p>Entrena en cualquiera de nuestras sedes en América Latina</p>
-        <p><strong>Desde</strong></p>
-        <p><strong>$ 109.900/mes</strong></p>
-        <button className="buttonPlan" onClick={goToPlans}>¡Ver Más!</button>
-
-  <div className="opciones">
-          <label><input type="checkbox" defaultChecked disabled /> Acceso ilimitado a todas las sedes estándar</label>
-          <label><input type="checkbox" defaultChecked disabled /> Clases grupales de cardio y musculación</label>
-          <label><input type="checkbox" defaultChecked disabled /> Locker personal en horario de entrenamiento</label>
-        </div>
-      </article>
-
-      <article className="cajaHome">
-        <h3>Plan Platinum</h3>
-        <p>Entrena en cualquiera de nuestras sedes en América Latina</p>
-        <p><strong>Desde</strong></p>
-        <p><strong>$ 149.900/mes</strong></p>
-        <button className="buttonPlan" onClick={goToPlans}>¡Ver Más!</button>
-
-  <div className="opciones">
-          <label><input type="checkbox" defaultChecked disabled /> Todo lo del Plan Golden</label>
-          <label><input type="checkbox" defaultChecked disabled /> Acceso a zona de spa y saunas</label>
-          <label><input type="checkbox" defaultChecked disabled /> Evaluación física mensual</label>
-        </div>
-      </article>
-
-      <article className="cajaHome">
-        <h3>Plan Diamond</h3>
-        <p>Entrena en cualquiera de nuestras sedes en América Latina</p>
-        <p><strong>Desde</strong></p>
-        <p><strong>$ 199.900/mes</strong></p>
-        <button className="buttonPlan" onClick={goToPlans}>¡Ver Más!</button>
-
-  <div className="opciones">
-          <label><input type="checkbox" defaultChecked disabled /> Plan de nutrición profesional</label>
-          <label><input type="checkbox" defaultChecked disabled /> Acceso VIP a zonas exclusivas y piscina</label>
-          <label><input type="checkbox" defaultChecked disabled /> Kit de bienvenida premium</label>
-        </div>
-      </article>
-    </section>
+    <section className="contenedor-caja-home">
+  <article className="home-plan">
+    <h3>Planes de Entrenamiento</h3>
+    <p>Descubre nuestros planes diseñados para adaptarse a tus metas fitness.</p>
+    <p>Desde acceso básico a todas las sedes hasta experiencias exclusivas con beneficios premium.</p>
+    <p>Elige el plan que mejor se ajuste a tu estilo de vida y alcanza tus objetivos con nosotros.</p>
+    <button className="buttonPlan" onClick={goToPlans}>¡Ver Más!</button>
+  </article>
+</section>
 
     <h1 className="home-title">Activa <span className="home-diferent">tu mejor versión</span></h1>
 
