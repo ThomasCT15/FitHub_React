@@ -43,6 +43,7 @@ function BurgerMenu() {
         <Link to="/quienes">Quienes Somos</Link>
         <Link to="/coaches">Entrenadores</Link>
         <Link to="/plans" >Planes</Link>
+        <Link to="/reviews">Reseñas</Link>
         
         <button className="menu-cta" onClick={goToRegister}>¡Inscríbete!</button>
       </nav>
