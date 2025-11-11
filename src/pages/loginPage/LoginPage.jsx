@@ -23,10 +23,10 @@ function LoginPage() {
             required
           />
           <button className="btn-ingresar">INGRESAR</button>
-          <Link to="/src/VIEWS/registra.html" className="olvidar">
+          <Link to="/register" className="olvidar">
             Olvidé mi contraseña
           </Link>
-          <Link to="/src/VIEWS/registra.html" className="ol">
+          <Link to="/register" className="ol">
             CREAR CUENTA
           </Link>
         </div>

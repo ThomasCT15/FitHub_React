@@ -1,17 +1,13 @@
 .po {
   background-color: #3061ff;
-  height: 70px;
+  height: 80px;
   display: flex;
-  margin-top: 1px;
   align-items: center;
   justify-content: center;
   color: white;
   text-align: center;
 }
 
-.po .ti{
-  margin-bottom: 50px;
-}
 
 .pi {
   text-align: center;

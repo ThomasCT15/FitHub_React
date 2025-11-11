@@ -98,7 +98,7 @@ function Home() {
       </article>
     </section>
 
-    <h1>Activa <span className="diferent">tu mejor versión</span></h1>
+    <h1 className="home-title">Activa <span className="home-diferent">tu mejor versión</span></h1>
 
     <div className="video-collage">
       <div className="video-card" onClick={(e) => openFullscreen(e.currentTarget)}>
