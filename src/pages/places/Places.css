@@ -1,0 +1,84 @@
+.contenedor {
+  display: flex;
+  justify-content: center; /* Centra todo el conjunto */
+  gap: 40px; /* Espacio entre tarjetas */
+  flex-wrap: wrap; /* Si no caben, se bajan */
+  padding: 20px;
+}
+
+.caja {
+  border: 3px solid black;
+  border-radius: 15px;
+  overflow: hidden; /* Para que la imagen respete el borde redondeado */
+  background-color: white;
+  width: 300px;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 50px; /* Espacio entre tarjetas */
+}
+
+.caja img {
+  width: 100%;
+  height: 180px; /* Altura fija */
+  object-fit: cover; /* Recorta y ajusta la imagen */
+  display: block;
+  border-radius: 15px;
+}
+
+.caja h2 {
+  margin: 10px 0 5px;
+  text-align: left;     /* Alinea el texto a la izquierda */
+  padding-left: 10px;   /* Espacio desde el borde */
+}
+
+.caja p {
+  font-size: 12px;
+  margin: 0 0 10px;
+  margin-bottom: 50px; /* Espacio entre el párrafo y el enlace */
+  text-align: left;   /* Alinea a la izquierda */
+  padding-left: 10px; /* Espacio desde el borde */
+  padding-right: 10px;
+}
+
+
+
+.caja a {
+  display: block; /* Uno debajo del otro */
+  margin: 8px auto;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 20px;
+  width: fit-content;
+}
+
+.caja a:first-of-type {
+  color: #0066ff;
+}
+
+.caja a:last-of-type {
+  background-color: #0066ff;
+  color: black;
+}
+.caja a:hover {
+  background-color: #284fce;
+  color: white;
+}
+
+.caja .places-cta {
+  position: relative;
+  top: 5px;
+  left: 1px;
+  font-size: 16px;
+  border-radius: 15px;
+  border: none;
+  padding: 12px 80px;
+  background-color: #3061ff;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.caja .places-cta:not(.close-button):hover {
+  background-color: #284fce;
+  color: white;
+}

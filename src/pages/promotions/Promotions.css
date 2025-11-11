@@ -1,0 +1,221 @@
+.po {
+  background-color: #3061ff;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+
+.pi {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #000;
+  padding: 15px 60px;
+}
+
+
+.text {
+  font-size: 18px;
+  max-width: 10000px;
+  margin: 10px;
+  padding: 0 6px;
+  text-align: center;
+}
+.bo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin: 0 auto 40px;
+  padding: 16px;
+  /* max-width: 1100px; centrar el contenido principal y limitar su ancho */
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  align-items: stretch;
+  animation: fadeIn 0.6s ease both;
+  max-width: 1100px;
+  margin: 0 auto; /* centrar cada fila */
+}
+
+.rowi {
+  gap: 30px;
+  align-items: stretch;
+  animation: fadeIn 0.6s ease both;
+  max-width: 1100px;
+  margin: 0 auto; /* /* centrar cada fila */
+}
+
+.caja {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.caja:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+}
+
+.dates {
+  color: #666;
+  margin-top: 8px;
+  align-items: center;
+  justify-content: center;
+}
+
+.desc {
+  margin-top: 8px;
+  color: #333;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefits {
+  margin-top: 10px;
+  padding-left: 18px;
+  color: #444;
+  align-items: center;
+  justify-content: center;
+}
+
+.price {
+  margin-top: 12px;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta {
+  background: linear-gradient(135deg, #3061ff, #6a4bff);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(48, 97, 255, 0.18);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(48, 97, 255, 0.22);
+}
+.cta:active {
+  transform: translateY(-1px);
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #f6f7ff, #ffffff);
+}
+.placeholder-content {
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Pantallas anchas: imágenes más altas para balance visual */
+/* @media (min-width: 1200px){
+  .img-responsive{
+    height: 300px;
+  }
+} */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* .contenedor-cajas: Contenedor flexible para agrupar varias cajas (tarjetas). */
+.contenedor-cajas {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 28px 12px;
+  flex-wrap: wrap;
+}
+
+/* .caja: Estiliza cada tarjeta (borde, sombra, padding, tamaño). */
+/* Estilo unificado para las tarjetas: más anchas, centradas y con altura controlada */
+.caja {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  padding: 20px;
+  width: 100%;
+  max-width: 520px; /* ancho mayor para tarjetas más destacadas */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* empuja CTA hacia el pie */
+  gap: 12px;
+}
+
+.caja .img-responsive {
+  width: 100%;
+  height: 50%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+
+/* .caja h3: Estilo para el título de la tarjeta. */
+.caja .sub_h3 {
+  text-align: left;
+  margin: 8px 0 6px 0;
+}
+
+/* .caja p: Estilo para el texto de la tarjeta. */
+.caja p {
+  text-align: left;
+  margin: 8px 0;
+  font-size: 16px;
+  color: #222;
+}
+
+.caja p strong {
+  font-weight: bold;
+}
+
+/* .caja button: Estiliza el botón dentro de la tarjeta. */
+.caja .cta {
+  padding: 10px 22px;
+  font-size: 16px;
+  width: auto;
+  align-self: center;
+}
+
+.promotions {
+  font-size: 36px;
+  text-align: center;
+  margin: 40px 0 20px 0;
+}
+
+
+
+/* Hover ya definido en .cta, se mantiene para coherencia */
